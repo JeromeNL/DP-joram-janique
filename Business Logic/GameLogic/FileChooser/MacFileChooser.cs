@@ -36,7 +36,6 @@
                         string selectedFilePath = files[selectedFileNumber - 1];
                         Console.WriteLine($"You've selected: {selectedFilePath}");
 
-
                         FileInfo fileInfo = new FileInfo(selectedFilePath);
 
                         return fileInfo;

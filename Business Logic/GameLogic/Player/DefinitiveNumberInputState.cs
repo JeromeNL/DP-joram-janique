@@ -5,6 +5,8 @@ namespace Business_Logic.GameLogic.Player
 {
     public class DefinitiveNumberInputState : SudokuInputModeState
     {
+        private const int extraSpaceValue = 2;
+
         public DefinitiveNumberInputState(Sudoku sudoku) : base(sudoku)
         {
         }
@@ -21,7 +23,7 @@ namespace Business_Logic.GameLogic.Player
             if (cell != null && cell.initialValue == 0)
             {
                 cell.currentValue = value;
-                Console.SetCursorPosition(cell.position.X * 2, cell.position.Y);
+                Console.SetCursorPosition(cell.position.X * extraSpaceValue, cell.position.Y);
                 Console.Write(value.ToString());
             }
         }

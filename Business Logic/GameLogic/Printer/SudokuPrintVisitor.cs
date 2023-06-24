@@ -8,6 +8,8 @@ namespace Business_Logic.GameLogic.Printer
         ConsoleColor.Magenta, ConsoleColor.Cyan, ConsoleColor.DarkRed, ConsoleColor.DarkGreen,
         ConsoleColor.DarkYellow, ConsoleColor.DarkBlue, ConsoleColor.DarkMagenta, ConsoleColor.DarkCyan,
         ConsoleColor.Gray, ConsoleColor.DarkGray, ConsoleColor.White, ConsoleColor.Black };
+        private const int ExtraSpaceValue = 2;
+        private const int BoardSize = 21;
 
         public void VisitPrintSudoku(RegularSudoku sudoku)
         {
@@ -58,7 +60,7 @@ namespace Business_Logic.GameLogic.Printer
                 Console.ForegroundColor = colors[i % colors.Length];
                 foreach (Leaf cell in group.cells)
                 {
-                    Console.SetCursorPosition(cell.position.X * 2, cell.position.Y); // Multiply X position by 2 to accommodate space
+                    Console.SetCursorPosition(cell.position.X * ExtraSpaceValue, cell.position.Y); 
                     Console.Write($"{cell.currentValue} ");
                 }
             }
@@ -71,9 +73,9 @@ namespace Business_Logic.GameLogic.Printer
         public void VisitPrintSudoku(SamuraiSudoku sudoku)
         {
             ConsoleColor overlapColor = ConsoleColor.Magenta;
-            for (int y = 0; y < 21; y++)
+            for (int y = 0; y < BoardSize; y++)
             {
-                for (int x = 0; x < 21; x++)
+                for (int x = 0; x < BoardSize; x++)
                 {
                     Position pos = new Position(x, y);
                     if (sudoku.sharedLeaves.ContainsKey(pos))

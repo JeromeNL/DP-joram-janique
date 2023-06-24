@@ -30,7 +30,5 @@ namespace Business_Model.Models
             return builder.CreateJigsawSudoku().Build();
         }
     }
-
-
 }
 

@@ -11,7 +11,6 @@ namespace Business_Logic.GameLogic.Player
         public JigsawPlayStrategy()
         {
 
-
         }
 
         public void PlaySudoku(Sudoku JigsawSudoku, FileInfo fileInfo)

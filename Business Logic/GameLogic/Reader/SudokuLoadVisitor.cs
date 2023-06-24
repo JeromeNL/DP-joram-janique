@@ -5,6 +5,11 @@ namespace Business_Logic.GameLogic.Reader
 {
     public class SudokuLoadVisitor : ISudokuLoadVisitor
     {
+        private const int BoardSize = 9;
+        private const int BoxSize = 3;
+        private const int TotalSize = 81;
+        private const int LinesSize = 5;
+
         public void VisitLoadLeaf(Leaf leaf)
         {
             leaf.currentValue = 42;
@@ -13,12 +18,6 @@ namespace Business_Logic.GameLogic.Reader
 
         public void VisitLoadComposite(Composite composite)
         {
-            // Implement the visiting logic for a Composite
-            foreach (IComponent cell in composite.cells)
-            {
-               // cell.AcceptLoad(this);
-            }
-            //TODO
         }
 
         public void VisitLoadRegularSudoku(RegularSudoku sudoku, FileInfo fileInfo)
@@ -76,9 +75,9 @@ namespace Business_Logic.GameLogic.Reader
             Dictionary<int, Composite> groups = new Dictionary<int, Composite>();
 
             int index = 0;
-            for (int y = 0; y < 9; y++)
+            for (int y = 0; y < BoardSize; y++)
             {
-                for (int x = 0; x < 9; x++)
+                for (int x = 0; x < BoardSize; x++)
                 {
                     int value = int.Parse(components[index].Substring(0, 1));
                     int group = int.Parse(components[index].Substring(2, 1));
@@ -124,30 +123,30 @@ namespace Business_Logic.GameLogic.Reader
             new int[] { 12, 12 }
             };
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < LinesSize; i++)
             {
                 string line = lines[i];
 
-                if (line.Length != 81)
+                if (line.Length != TotalSize)
                 {
                     throw new FormatException("Samurai Sudoku data is in the wrong format.");
                 }
 
                 Composite board = new Composite();
 
-                for (int boxRow = 0; boxRow < 3; boxRow++)
+                for (int boxRow = 0; boxRow < BoxSize; boxRow++)
                 {
-                    for (int boxCol = 0; boxCol < 3; boxCol++)
+                    for (int boxCol = 0; boxCol < BoxSize; boxCol++)
                     {
                         Composite group = new Composite();
 
-                        for (int cellRow = 0; cellRow < 3; cellRow++)
+                        for (int cellRow = 0; cellRow < BoxSize; cellRow++)
                         {
-                            for (int cellCol = 0; cellCol < 3; cellCol++)
+                            for (int cellCol = 0; cellCol < BoxSize; cellCol++)
                             {
-                                int index = (boxRow * 3 + cellRow) * 9 + boxCol * 3 + cellCol;
+                                int index = (boxRow * BoxSize + cellRow) * BoxSize + boxCol * BoxSize + cellCol;
 
-                                Position pos = new Position(boardOffsets[i][1] + boxCol * 3 + cellCol, boardOffsets[i][0] + boxRow * 3 + cellRow);
+                                Position pos = new Position(boardOffsets[i][1] + boxCol * BoxSize + cellCol, boardOffsets[i][0] + boxRow * BoxSize + cellRow);
 
                                 char cellValueChar = line[index];
                                 int cellValue = 0;

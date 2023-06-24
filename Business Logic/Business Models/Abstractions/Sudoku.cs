@@ -16,6 +16,7 @@ namespace Business_Model.Abstractions
         public Dictionary<Position, Leaf> sharedLeaves = new Dictionary<Position, Leaf>();
         public List<IComponent> components;
         public SudokuInputModeState CurrentState;
+        private const int boardSize = 9;
 
 
         public Sudoku()
@@ -44,7 +45,7 @@ namespace Business_Model.Abstractions
 
         public bool IsSafeToPlaceValue(Leaf cell, int value, Sudoku JigsawSudoku)
         {
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < boardSize; i++)
             {
                 if (GetCellValue(cell.position.X, i, JigsawSudoku) == value || GetCellValue(i, cell.position.Y, JigsawSudoku) == value)
                     return false;

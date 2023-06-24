@@ -10,6 +10,8 @@ namespace Business_Logic.GameLogic.Player
 {
     class SamuraiPlayStrategy : IPlayStrategy
     {
+        private const int extraSpaceValue = 2;
+
         public SamuraiPlayStrategy()
         {
 
@@ -147,7 +149,7 @@ namespace Business_Logic.GameLogic.Player
             if (cell != null && cell.initialValue == 0)
             {
                 cell.currentValue = value;
-                Console.SetCursorPosition(cell.position.X * 2, cell.position.Y);
+                Console.SetCursorPosition(cell.position.X * extraSpaceValue, cell.position.Y);
                 Console.Write(value.ToString());
             }
         }
