@@ -1,4 +1,5 @@
-﻿using Business_Logic.GameLogic.Reader;
+﻿using Business_Logic.Business_Models.Models;
+using Business_Logic.GameLogic.Reader;
 using Business_Model.Interfaces;
 using System.IO;
 
@@ -10,25 +11,17 @@ namespace Business_Model.Models
 
         public RegularSudoku CreateRegularSudokuFromFile(FileInfo fileInfo)
         {
-            RegularSudoku sudoku = new RegularSudoku();
-            SudokuLoadVisitor visitor = new SudokuLoadVisitor();
-            sudoku.AcceptLoad(visitor, fileInfo);
-            return sudoku;
+            return ConcreteRegularBuilder.CreateRegularSudokuFromFile(fileInfo);
         }
 
         public JigsawSudoku CreateJigsawSudokuFromFile(FileInfo fileInfo)
         {
-            JigsawSudoku sudoku = new JigsawSudoku();
-            SudokuLoadVisitor visitor = new SudokuLoadVisitor();
-            sudoku.AcceptLoad(visitor, fileInfo);
-            return sudoku;
+          return ConcreteJigsawBuilder.CreateJigsawSudokuFromFile(fileInfo);
         }
+
         public SamuraiSudoku CreateSamuraiSudokuFromFile(FileInfo fileInfo)
         {
-            SamuraiSudoku sudoku = new SamuraiSudoku();
-            SudokuLoadVisitor visitor = new SudokuLoadVisitor();
-            sudoku.AcceptLoad(visitor, fileInfo);
-            return sudoku;
+           return ConcreteSamuraiBuilder.CreateSamuraiSudokuFromFile(fileInfo);
         }
 
 
