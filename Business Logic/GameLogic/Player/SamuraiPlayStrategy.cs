@@ -17,6 +17,12 @@ namespace Business_Logic.GameLogic.Player
 
         }
 
+
+        int min = 0;
+        int max = 9;
+        int baseStart = 1;
+        int baseEnd = 5;
+
         public void PlaySudoku(Sudoku sudoku, FileInfo fileInfo)
         {
             while (true)
@@ -59,10 +65,10 @@ namespace Business_Logic.GameLogic.Player
 
         private bool TryParseMoveInput(string input, out int board, out int row, out int column, out int value)
         {
-            board = row = column = value = 0;
+            board = row = column = value = min;
             string[] parts = input.Split(' ');
             if (parts.Length != 4 || !int.TryParse(parts[0], out board) || !int.TryParse(parts[1], out row) || !int.TryParse(parts[2], out column) || !int.TryParse(parts[3], out value)
-                || board < 1 || board > 5 || row < 1 || row > 9 || column < 1 || column > 9 || value < 0 || value > 9)
+                || board < baseStart || board > baseEnd || row < baseStart || row > max || column < baseStart || column > max || value < min || value > max)
             {
                 Console.WriteLine("Invalid input. Please enter board (1-5), row, column, and value as valid numbers between 1 and 9.");
                 return false;
@@ -95,7 +101,7 @@ namespace Business_Logic.GameLogic.Player
 
         private bool ValidateMove(Leaf cell, int value, Sudoku sudoku)
         {
-            if (cell.initialValue != 0)
+            if (cell.initialValue != min)
             {
                 Console.WriteLine("Invalid move. Cannot modify the initial values.");
                 return false;
@@ -127,7 +133,7 @@ namespace Business_Logic.GameLogic.Player
                 Console.WriteLine("Invalid input. Please enter a valid number as a helper value.");
                 return;
             }
-            if (cell.currentValue != 0)
+            if (cell.currentValue != min)
             {
                 Console.WriteLine("Cannot add a helper value to a cell with a definitive number.");
                 return;
@@ -146,7 +152,7 @@ namespace Business_Logic.GameLogic.Player
 
         private void SetCellValue(Leaf cell, int value)
         {
-            if (cell != null && cell.initialValue == 0)
+            if (cell != null && cell.initialValue == min)
             {
                 cell.currentValue = value;
                 Console.SetCursorPosition(cell.position.X * extraSpaceValue, cell.position.Y);
@@ -157,7 +163,7 @@ namespace Business_Logic.GameLogic.Player
 
         private Composite GetBoardComponent(int index, Sudoku sudoku)
         {
-            if (index >= 0 && index < sudoku.components.Count)
+            if (index >= min && index < sudoku.components.Count)
             {
                 return sudoku.components[index] as Composite;
             }
@@ -174,7 +180,7 @@ namespace Business_Logic.GameLogic.Player
                 {
                     foreach (Leaf cell in board.cells)
                     {
-                        if (cell.currentValue == 0 || !sudoku.IsSafeToPlaceValue(cell, cell.currentValue, sudoku))
+                        if (cell.currentValue == min || !sudoku.IsSafeToPlaceValue(cell, cell.currentValue, sudoku))
                             return false;
                     }
                 }
