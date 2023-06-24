@@ -6,16 +6,5 @@
         {
             FileInfo ChooseFile();
         }
-
-
-
-
-
-
-
-
-
-
-
     }
 }

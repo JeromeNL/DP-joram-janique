@@ -8,9 +8,6 @@ namespace Business_Logic.GameLogic.Solver
     {
         void SolveSudoku(Sudoku sudoku);
     }
-
-
-
 }
 
 

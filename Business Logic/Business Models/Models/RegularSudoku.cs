@@ -18,7 +18,6 @@ namespace Business_Model.Models
         }
 
 
-
         public RegularSudoku(RegularSudoku sudokuToCopy)
         {
             this.timer = sudokuToCopy.timer;
@@ -33,11 +32,11 @@ namespace Business_Model.Models
             return new RegularSudoku(this);
         }
 
+
         public override void AcceptPrint(ISudokuPrintVisitor visitor)
         {
             visitor.VisitPrintSudoku(this);
         }
-
     }
 
 

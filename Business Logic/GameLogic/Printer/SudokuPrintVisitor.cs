@@ -11,7 +11,6 @@ namespace Business_Logic.GameLogic.Printer
 
         public void VisitPrintSudoku(RegularSudoku sudoku)
         {
-
             if (sudoku.components.Count == 0)
             {
                 Console.WriteLine("No components found in the Sudoku grid");
@@ -51,7 +50,6 @@ namespace Business_Logic.GameLogic.Printer
         }
 
 
-
         public void VisitPrintSudoku(JigsawSudoku sudoku)
         {
             for (int i = 0; i < sudoku.components.Count; i++)
@@ -68,6 +66,7 @@ namespace Business_Logic.GameLogic.Printer
             Console.WriteLine();
 
         }
+
 
         public void VisitPrintSudoku(SamuraiSudoku sudoku)
         {
@@ -115,27 +114,19 @@ namespace Business_Logic.GameLogic.Printer
                         Console.Write("  ");
                     }
                 }
-
                 Console.ResetColor();
                 Console.WriteLine();
             }
-
 
         }
 
 
         private void PrintCellValue(Position pos, SamuraiSudoku sudoku)
         {
-            // Get the value of the cell
             int cellValue = sudoku.sharedLeaves[pos].currentValue;
 
-            // Print the cell value
             Console.Write(cellValue == 0 ? " 0" : " " + cellValue.ToString());
         }
-
-
     }
-
-
 }
 

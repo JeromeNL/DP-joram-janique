@@ -7,16 +7,14 @@ namespace Business_Logic.GameLogic.Reader
     {
         public RegularReaderStrategy()
         {
-
-
         }
+
 
         public ISudoku CreateBasedOnFile(FileInfo fileInfo)
         {
             SudokuBuilder builder = new SudokuBuilder();
             return builder.CreateRegularSudokuFromFile(fileInfo);
         }
-
     }
 }
 

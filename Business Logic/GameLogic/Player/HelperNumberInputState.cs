@@ -10,10 +10,12 @@ namespace Business_Logic.GameLogic.Player
         {
         }
 
+
         public override void HandleInput(Leaf cell, int value)
         {
             HandleHelperNumberInput(cell, value, RegularSudoku);
         }
+
 
         private void HandleHelperNumberInput(Leaf cell, int value, Sudoku RegularSudoku)
         {

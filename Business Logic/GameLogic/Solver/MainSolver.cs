@@ -36,8 +36,6 @@ namespace Business_Logic.GameLogic.Solver
             {
                 throw new DirectoryNotFoundException();
             }
-
-
         context.GetSolver(a);
         }
     }

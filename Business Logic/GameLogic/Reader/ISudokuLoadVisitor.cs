@@ -10,7 +10,5 @@ namespace Business_Logic.GameLogic.Reader
         void VisitLoadComposite(Composite composite);
         void VisitLoadLeaf(Leaf leaf);
     }
-
-
 }
 

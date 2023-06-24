@@ -13,7 +13,6 @@ namespace Business_Logic.GameLogic.Solver
         public SamuraiSolverStrategy()
         {
 
-
         }
         public void SolveSudoku(Sudoku SamuraiSudoku)
         {
@@ -25,7 +24,6 @@ namespace Business_Logic.GameLogic.Solver
             var y = 21;
             Console.SetCursorPosition(x * 2, y);
             Console.WriteLine(" ");
-
 
             SamuraiSudoku.timer.Stop();
             SudokuPrintVisitor visitor = new SudokuPrintVisitor();
@@ -102,7 +100,6 @@ namespace Business_Logic.GameLogic.Solver
                     }
                 }
             }
-
             return bestCell;
         }
 
@@ -126,7 +123,6 @@ namespace Business_Logic.GameLogic.Solver
                 if (GetCellValue(cell.position.X, i, board) == value || GetCellValue(i, cell.position.Y, board) == value)
                     return false;
             }
-
             return true;
         }
 
@@ -138,7 +134,6 @@ namespace Business_Logic.GameLogic.Solver
                 if (groupCell.currentValue == value)
                     return false;
             }
-
             return true;
         }
 
@@ -171,7 +166,6 @@ namespace Business_Logic.GameLogic.Solver
                     }
                 }
             }
-
             return true;
         }
 
@@ -186,7 +180,6 @@ namespace Business_Logic.GameLogic.Solver
                         return cell.currentValue;
                 }
             }
-
             return 0;
         }
 
@@ -203,7 +196,6 @@ namespace Business_Logic.GameLogic.Solver
                     }
                 }
             }
-
             return null;
         }
 
@@ -216,18 +208,7 @@ namespace Business_Logic.GameLogic.Solver
                 if (group.cells.Contains(cell))
                     return group;
             }
-
             return null;
         }
-
-
-
     }
 }
-
-
-
-
-
-
-

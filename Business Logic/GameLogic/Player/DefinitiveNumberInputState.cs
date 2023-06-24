@@ -9,10 +9,12 @@ namespace Business_Logic.GameLogic.Player
         {
         }
 
+
         public override void HandleInput(Leaf cell, int value)
         {
             SetCellValue(cell, value, RegularSudoku);
         }
+
 
         private void SetCellValue(Leaf cell, int value, Sudoku RegularSudoku)
         {

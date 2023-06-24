@@ -14,6 +14,7 @@ namespace Business_Model.Models
 
         }
 
+
         public SamuraiSudoku(SamuraiSudoku sudokuToCopy)
         {
             this.timer = sudokuToCopy.timer;
@@ -22,15 +23,18 @@ namespace Business_Model.Models
             this.sharedLeaves = sudokuToCopy.sharedLeaves;
         }
 
+
         public override ISudoku Clone()
         {
             return new SamuraiSudoku(this);
         }
 
+
         public void AcceptLoad(ISudokuLoadVisitor visitor, FileInfo fileInfo)
         {
             visitor.VisitLoadSamuraiSudoku(this, fileInfo);
         }
+
 
         public override void AcceptPrint(ISudokuPrintVisitor visitor)
         {

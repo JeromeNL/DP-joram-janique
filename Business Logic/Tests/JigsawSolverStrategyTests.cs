@@ -1,8 +1,5 @@
 ﻿using Xunit;
-using System.IO;
-using System;
 using Business_Model.Models;
-using Business_Logic.GameLogic.Printer;
 using Business_Logic.GameLogic.Solver;
 using Business_Model.Abstractions;
 
@@ -24,7 +21,6 @@ namespace Business_Logic.Tests.GameLogic.Solver
             // Assert
             Assert.True(solved);
         }
-
 
 
         [Fact]

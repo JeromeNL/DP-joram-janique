@@ -1,7 +1,5 @@
 ﻿using Business_Model.Interfaces;
 using Business_Model.Models;
-using System.IO;
-using System.Xml;
 
 namespace Business_Logic.GameLogic.Reader
 {
@@ -15,9 +13,7 @@ namespace Business_Logic.GameLogic.Reader
         {
             SudokuBuilder builder = new SudokuBuilder();
             return builder.CreateJigsawSudokuFromFile(fileInfo);
-
         }
-
     }
 }
 

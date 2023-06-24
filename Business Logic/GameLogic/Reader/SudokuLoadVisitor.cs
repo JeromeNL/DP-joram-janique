@@ -18,6 +18,7 @@ namespace Business_Logic.GameLogic.Reader
             {
                // cell.AcceptLoad(this);
             }
+            //TODO
         }
 
         public void VisitLoadRegularSudoku(RegularSudoku sudoku, FileInfo fileInfo)
@@ -28,7 +29,6 @@ namespace Business_Logic.GameLogic.Reader
 
             int[,] values = ParseRegularSudokuData(sudokuData, gridSize);
 
-            // Create the Sudoku components and add them to the composite
             int blockSize = (int)Math.Sqrt(gridSize);
             for (int blockRow = 0; blockRow < blockSize; blockRow++)
             {
@@ -53,6 +53,7 @@ namespace Business_Logic.GameLogic.Reader
             }
         }
 
+
         public int[,] ParseRegularSudokuData(string data, int size)
         {
             int[,] values = new int[size, size];
@@ -66,8 +67,6 @@ namespace Business_Logic.GameLogic.Reader
                 }
             }
             return values;
-
-
         }
 
         public void VisitLoadJigsawSudoku(JigsawSudoku sudoku, FileInfo fileInfo)
@@ -105,7 +104,6 @@ namespace Business_Logic.GameLogic.Reader
             {
                 sudoku.AddComponent(group);
             }
-
         }
 
         public void VisitLoadSamuraiSudoku(SamuraiSudoku sudoku, FileInfo fileInfo)
@@ -117,7 +115,6 @@ namespace Business_Logic.GameLogic.Reader
                 throw new FormatException("Samurai Sudoku data is in the wrong format.");
             }
 
-            // Define the offset for each board in the Samurai Sudoku
             int[][] boardOffsets = new int[][]
             {
             new int[] { 0, 0 },
@@ -138,28 +135,23 @@ namespace Business_Logic.GameLogic.Reader
 
                 Composite board = new Composite();
 
-                // Create groups
                 for (int boxRow = 0; boxRow < 3; boxRow++)
                 {
                     for (int boxCol = 0; boxCol < 3; boxCol++)
                     {
                         Composite group = new Composite();
 
-                        // Create cells for each group
                         for (int cellRow = 0; cellRow < 3; cellRow++)
                         {
                             for (int cellCol = 0; cellCol < 3; cellCol++)
                             {
                                 int index = (boxRow * 3 + cellRow) * 9 + boxCol * 3 + cellCol;
 
-                                // Adjusted position to represent a 2D grid
-                                // NOTE: The x and y coordinates are switched here
                                 Position pos = new Position(boardOffsets[i][1] + boxCol * 3 + cellCol, boardOffsets[i][0] + boxRow * 3 + cellRow);
 
                                 char cellValueChar = line[index];
                                 int cellValue = 0;
 
-                                // Don't parse a value if the cell is empty
                                 if (cellValueChar != '0')
                                 {
                                     if (!int.TryParse(cellValueChar.ToString(), out cellValue))
@@ -168,7 +160,6 @@ namespace Business_Logic.GameLogic.Reader
                                     }
                                 }
 
-                                // Create a Leaf for the cell, or use existing one
                                 Leaf cellLeaf;
                                 if (sudoku.sharedLeaves.ContainsKey(pos))
                                 {
@@ -183,24 +174,15 @@ namespace Business_Logic.GameLogic.Reader
                                 cellLeaf.currentValue = cellValue;
                                 cellLeaf.initialValue = cellValue;
 
-                                // Add the Leaf to the Group
                                 group.AddCell(cellLeaf);
                             }
                         }
-
-                        // Add the Group to the board Composite
                         board.AddCell(group);
                     }
                 }
-
-                // Add the board Composite to the SamuraiSudoku
                 sudoku.AddComponent(board);
             }
         }
-
-
     }
-
-
 }
 

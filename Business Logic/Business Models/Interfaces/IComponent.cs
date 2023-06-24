@@ -6,7 +6,5 @@ namespace Business_Model.Interfaces
     {
         void AcceptLoad(ISudokuLoadVisitor visitor);
     }
-
-
 }
 

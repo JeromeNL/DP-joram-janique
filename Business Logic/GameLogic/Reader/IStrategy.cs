@@ -6,9 +6,6 @@ namespace Business_Logic.GameLogic.Reader
     {
         ISudoku CreateBasedOnFile(FileInfo fileInfo);
     }
-
-
-
 }
 
 

@@ -4,14 +4,7 @@ using Business_Logic.GameLogic.Printer;
 using Business_Logic.GameLogic.Reader;
 using Business_Model.Interfaces;
 using Business_Model.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Diagnostics;
-using System.Drawing;
-using System.Runtime.CompilerServices;
-using System.Text.RegularExpressions;
-using static System.Net.Mime.MediaTypeNames;
 using IComponent = Business_Model.Interfaces.IComponent;
 
 namespace Business_Model.Abstractions
@@ -23,6 +16,7 @@ namespace Business_Model.Abstractions
         public Dictionary<Position, Leaf> sharedLeaves = new Dictionary<Position, Leaf>();
         public List<IComponent> components;
         public SudokuInputModeState CurrentState;
+
 
         public Sudoku()
         {
@@ -38,12 +32,15 @@ namespace Business_Model.Abstractions
             visitor.VisitLoadComposite(new Composite());
         }
 
+
         public void AddComponent(IComponent component)
         {
             components.Add(component);
         }
 
+
         public abstract void AcceptPrint(ISudokuPrintVisitor visitor);
+
 
         public bool IsSafeToPlaceValue(Leaf cell, int value, Sudoku JigsawSudoku)
         {
@@ -59,7 +56,6 @@ namespace Business_Model.Abstractions
                 if (groupCell.currentValue == value)
                     return false;
             }
-
             return true;
         }
 
@@ -77,9 +73,9 @@ namespace Business_Model.Abstractions
                     }
                 }
             }
-
             return 0;
         }
+
 
         public Composite GetGroup(Leaf cell, Sudoku JigsawSudoku)
         {
@@ -93,11 +89,6 @@ namespace Business_Model.Abstractions
             }
             return null;
         }
-
-
-
     }
-
-
 }
 

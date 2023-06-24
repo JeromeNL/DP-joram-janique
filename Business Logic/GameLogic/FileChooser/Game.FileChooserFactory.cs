@@ -18,21 +18,10 @@
                     return new MacFileChooser();
                 }
                 else { 
-                Console.WriteLine("Reconsider your lifechoices carefully");
-                throw new NotSupportedException("Operating system not supported");
+                    Console.WriteLine("Reconsider your lifechoices carefully");
+                    throw new NotSupportedException("Operating system not supported");
                 }
             }
         }
-
-
-
-
-
-
-
-
-
-
-
     }
 }

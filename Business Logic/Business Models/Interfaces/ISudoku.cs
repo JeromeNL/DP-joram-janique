@@ -1,5 +1,4 @@
-﻿using Business_Logic.GameLogic;
-using Business_Logic.GameLogic.Printer;
+﻿using Business_Logic.GameLogic.Printer;
 using Business_Logic.GameLogic.Reader;
 
 namespace Business_Model.Interfaces
@@ -8,9 +7,6 @@ namespace Business_Model.Interfaces
     {
         void AcceptLoad(ISudokuLoadVisitor visitor);
         void AcceptPrint(ISudokuPrintVisitor visitor);
-
     }
-
-
 }
 

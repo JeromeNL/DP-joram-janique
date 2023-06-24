@@ -1,8 +1,5 @@
-﻿
+﻿using Business_Model.Abstractions;
 
-using Business_Logic.GameLogic.Reader;
-using Business_Model.Abstractions;
-using System.IO;
 
 namespace Business_Logic.GameLogic.Player
 {

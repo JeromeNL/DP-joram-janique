@@ -9,8 +9,6 @@ namespace Business_Model.Models
 {
     public class JigsawSudoku : Sudoku, ICloneableSudoku
     {
-
-
         public JigsawSudoku()
         {
 
@@ -39,7 +37,5 @@ namespace Business_Model.Models
             visitor.VisitPrintSudoku(this);
         }
     }
-
-
 }
 

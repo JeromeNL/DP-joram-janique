@@ -1,6 +1,4 @@
-﻿
-
-using Business_Model.Interfaces;
+﻿using Business_Model.Interfaces;
 
 namespace Business_Logic.GameLogic.Reader
 {
@@ -15,7 +13,6 @@ namespace Business_Logic.GameLogic.Reader
                 ".6x6",
                 ".9x9"
             };
-
 
             if (regularSudokuExtensions.Contains(fileInfo.Extension))
             {

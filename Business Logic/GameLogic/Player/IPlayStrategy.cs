@@ -6,9 +6,6 @@ namespace Business_Logic.GameLogic.Player
     {
         void PlaySudoku(Sudoku sudoku, FileInfo fileInfo);
     }
-
-
-
 }
 
 

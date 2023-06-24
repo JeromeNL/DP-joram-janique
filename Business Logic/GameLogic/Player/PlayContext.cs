@@ -1,5 +1,4 @@
-﻿
-using Business_Model.Abstractions;
+﻿using Business_Model.Abstractions;
 
 namespace Business_Logic.GameLogic.Player
 {

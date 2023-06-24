@@ -1,11 +1,8 @@
-﻿
-using Business_Logic.GameLogic.Printer;
+﻿using Business_Logic.GameLogic.Printer;
 using Business_Logic.GameLogic.Solver;
 using Business_Model.Abstractions;
 using Business_Model.Interfaces;
 using Business_Model.Models;
-using System.Diagnostics;
-using System.Xml;
 
 namespace Business_Logic.GameLogic.Player
 {
@@ -13,8 +10,6 @@ namespace Business_Logic.GameLogic.Player
     {
         public RegularPlayStrategy()
         {
-
-
         }
 
         public void PlaySudoku(Sudoku RegularSudoku, FileInfo fileInfo)
@@ -47,6 +42,7 @@ namespace Business_Logic.GameLogic.Player
             }
         }
 
+
         private void ToggleSudokuMode(Sudoku JigsawSudoku)
         {
             if (JigsawSudoku.CurrentState is DefinitiveNumberInputState)
@@ -61,6 +57,7 @@ namespace Business_Logic.GameLogic.Player
             }
         }
 
+
         private bool TryParseMoveInput(string input, out int row, out int column, out int value)
         {
             row = column = value = 0;
@@ -73,6 +70,7 @@ namespace Business_Logic.GameLogic.Player
             }
             return true;
         }
+
 
         private bool ValidateMove(Leaf cell, int value, Sudoku RegularSudoku)
         {
@@ -90,12 +88,11 @@ namespace Business_Logic.GameLogic.Player
             return false;
         }
 
+
         private void PerformMove(Leaf cell, int value, Sudoku JigsawSudoku)
         {
             JigsawSudoku.CurrentState.HandleInput(cell, value);
         }
-
-
 
 
         private Leaf GetCell(int row, int column, Sudoku RegularSudoku)
@@ -113,13 +110,8 @@ namespace Business_Logic.GameLogic.Player
                     }
                 }
             }
-
             return null;
         }
-
-
-
-
 
 
         private bool IsSudokuSolved(Sudoku RegularSudoku)
@@ -135,12 +127,8 @@ namespace Business_Logic.GameLogic.Player
                     }
                 }
             }
-
             return true;
         }
-
-
-
     }
 }
 

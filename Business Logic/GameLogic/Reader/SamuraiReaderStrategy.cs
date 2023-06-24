@@ -1,6 +1,5 @@
 ﻿using Business_Model.Interfaces;
 using Business_Model.Models;
-using System.Xml;
 
 namespace Business_Logic.GameLogic.Reader
 {
@@ -10,6 +9,7 @@ namespace Business_Logic.GameLogic.Reader
         {
 
         }
+
 
         public ISudoku CreateBasedOnFile(FileInfo fileInfo)
         {

@@ -13,7 +13,6 @@ namespace Business_Logic.GameLogic.Solver
         public RegularSolverStrategy()
         {
 
-
         }
 
 
@@ -48,7 +47,6 @@ namespace Business_Logic.GameLogic.Solver
                 Console.SetCursorPosition(cell.position.X * 2, cell.position.Y);
                 Console.Write("  ");
             }
-
             return false;
         }
 
@@ -88,7 +86,6 @@ namespace Business_Logic.GameLogic.Solver
                     }
                 }
             }
-
             return bestCell;
         }
 
@@ -123,7 +120,6 @@ namespace Business_Logic.GameLogic.Solver
                     }
                 }
             }
-
             return 0;
         }
 
@@ -139,14 +135,5 @@ namespace Business_Logic.GameLogic.Solver
             }
             return null;
         }
-
-
     }
 }
-
-
-
-
-
-
-

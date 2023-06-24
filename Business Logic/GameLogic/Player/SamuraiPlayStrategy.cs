@@ -13,12 +13,10 @@ namespace Business_Logic.GameLogic.Player
         public SamuraiPlayStrategy()
         {
 
-
         }
 
         public void PlaySudoku(Sudoku sudoku, FileInfo fileInfo)
         {
-
             while (true)
             {
                 sudoku.AcceptPrint(new SudokuPrintVisitor());
@@ -89,9 +87,9 @@ namespace Business_Logic.GameLogic.Player
                     }
                 }
             }
-
             return null;
         }
+
 
         private bool ValidateMove(Leaf cell, int value, Sudoku sudoku)
         {
@@ -109,10 +107,12 @@ namespace Business_Logic.GameLogic.Player
             return false;
         }
 
+
         private void PerformMove(Leaf cell, int value, Sudoku JigsawSudoku)
         {
             JigsawSudoku.CurrentState.HandleInput(cell, value);
         }
+
 
         private void HandleHelperNumberInput(Leaf cell, int value)
         {
@@ -177,17 +177,9 @@ namespace Business_Logic.GameLogic.Player
                     }
                 }
             }
-
             return true;
         }
     }
-
-
-
-
-
-
-
 }
 
 

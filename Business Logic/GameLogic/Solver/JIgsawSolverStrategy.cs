@@ -11,7 +11,6 @@ namespace Business_Logic.GameLogic.Solver
         public JigsawSolverStrategy()
         {
 
-
         }
 
         public void SolveSudoku(Sudoku JigsawSudoku)
@@ -97,13 +96,8 @@ namespace Business_Logic.GameLogic.Solver
                     }
                 }
             }
-
             return bestCell;
         }
-
-
-
-
     }
 }
 

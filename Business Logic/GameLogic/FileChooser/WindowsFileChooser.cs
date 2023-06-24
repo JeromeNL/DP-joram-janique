@@ -6,13 +6,12 @@
         {
             public FileInfo ChooseFile()
             {
-                string directoryPath = "C:\\Programmability\\Week 2\\Week 2 Huiswerk\\DesignPatternsJoramJanique\\New folder\\SudokuSolver-Ai\\SudokuSolver-Ai\\Business Logic\\Puzzles\\";
+                string directoryPath = "C:\\Users\\joram\\Source\\Repos\\DP-joram-janique-2\\Business Logic\\Puzzles\\";
 
                 if (!Directory.Exists(directoryPath))
                 {
                     Console.WriteLine("Directory does not exist.");
                     throw new NotSupportedException("Directory does not exist.");
-
                 }
 
                 var files = Directory.GetFiles(directoryPath);
@@ -40,8 +39,6 @@
 
                         Console.Clear();
                         return fileInfo;
-
-
                     }
                     else
                     {
@@ -50,16 +47,5 @@
                 }
             }
         }
-
-
-
-
-
-
-
-
-
-
-
     }
 }

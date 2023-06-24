@@ -3,12 +3,9 @@ using Business_Logic.GameLogic.Solver;
 using Business_Model.Abstractions;
 using Business_Model.Interfaces;
 using Business_Model.Models;
-using System.Diagnostics;
 
 namespace Business_Logic.GameLogic.Player
 {
-
-
     class JigsawPlayStrategy : IPlayStrategy
     {
         public JigsawPlayStrategy()
@@ -45,6 +42,7 @@ namespace Business_Logic.GameLogic.Player
                 break;
             }
         }
+
 
         private void ToggleSudokuMode(Sudoku JigsawSudoku)
         {
@@ -89,12 +87,11 @@ namespace Business_Logic.GameLogic.Player
             return false;
         }
 
+
         private void PerformMove(Leaf cell, int value, Sudoku JigsawSudoku)
         {
             JigsawSudoku.CurrentState.HandleInput(cell, value);
         }
-
-
 
 
         private Leaf GetCell(int row, int column, Sudoku RegularSudoku)
@@ -112,13 +109,8 @@ namespace Business_Logic.GameLogic.Player
                     }
                 }
             }
-
             return null;
         }
-
-
-
-
 
 
         private bool IsSudokuSolved(Sudoku RegularSudoku)
@@ -134,12 +126,8 @@ namespace Business_Logic.GameLogic.Player
                     }
                 }
             }
-
             return true;
         }
-
-
-
     }
 }
 

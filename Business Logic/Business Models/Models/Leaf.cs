@@ -31,7 +31,5 @@ namespace Business_Model.Models
             }
         }
     }
-
-
 }
 
