@@ -12,6 +12,9 @@ namespace Business_Logic.GameLogic.Player
         {
         }
 
+        int min = 0;
+        int max = 9;
+
         public void PlaySudoku(Sudoku RegularSudoku, FileInfo fileInfo)
         {
 
@@ -60,10 +63,10 @@ namespace Business_Logic.GameLogic.Player
 
         private bool TryParseMoveInput(string input, out int row, out int column, out int value)
         {
-            row = column = value = 0;
+            row = column = value = min;
             string[] parts = input.Split(' ');
             if (parts.Length != 3 || !int.TryParse(parts[0], out row) || !int.TryParse(parts[1], out column) || !int.TryParse(parts[2], out value)
-                || row < 1 || row > 9 || column < 1 || column > 9 || value < 0 || value > 9)
+                || row < 1 || row > max || column < 1 || column > max || value < min || value > max)
             {
                 Console.WriteLine("Invalid input. Please enter row, column, and value as valid numbers between 1 and 9.");
                 return false;
@@ -74,12 +77,12 @@ namespace Business_Logic.GameLogic.Player
 
         private bool ValidateMove(Leaf cell, int value, Sudoku RegularSudoku)
         {
-            if (cell.initialValue != 0)
+            if (cell.initialValue != min)
             {
                 Console.WriteLine("Invalid move. Cannot modify the initial values.");
                 return false;
             }
-            else if (cell.initialValue == 0 && value == 0)
+            else if (cell.initialValue == min && value == min)
             {
                 return true;
             }
@@ -122,7 +125,7 @@ namespace Business_Logic.GameLogic.Player
                 {
                     foreach (Leaf cell in group.cells)
                     {
-                        if (cell.currentValue == 0 || !RegularSudoku.IsSafeToPlaceValue(cell, cell.currentValue, RegularSudoku))
+                        if (cell.currentValue == min || !RegularSudoku.IsSafeToPlaceValue(cell, cell.currentValue, RegularSudoku))
                             return false;
                     }
                 }

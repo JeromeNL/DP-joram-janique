@@ -7,8 +7,6 @@ namespace Business_Logic.GameLogic.Reader
     {
         private const int BoardSize = 9;
         private const int BoxSize = 3;
-        private const int TotalSize = 81;
-        private const int LinesSize = 5;
 
         public void VisitLoadLeaf(Leaf leaf)
         {
@@ -18,6 +16,7 @@ namespace Business_Logic.GameLogic.Reader
 
         public void VisitLoadComposite(Composite composite)
         {
+            
         }
 
         public void VisitLoadRegularSudoku(RegularSudoku sudoku, FileInfo fileInfo)
@@ -123,11 +122,11 @@ namespace Business_Logic.GameLogic.Reader
             new int[] { 12, 12 }
             };
 
-            for (int i = 0; i < LinesSize; i++)
+            for (int i = 0; i < 5; i++)
             {
                 string line = lines[i];
 
-                if (line.Length != TotalSize)
+                if (line.Length != 81)
                 {
                     throw new FormatException("Samurai Sudoku data is in the wrong format.");
                 }
@@ -144,7 +143,7 @@ namespace Business_Logic.GameLogic.Reader
                         {
                             for (int cellCol = 0; cellCol < BoxSize; cellCol++)
                             {
-                                int index = (boxRow * BoxSize + cellRow) * BoxSize + boxCol * BoxSize + cellCol;
+                                int index = (boxRow * BoxSize + cellRow) * BoardSize + boxCol * BoxSize + cellCol;
 
                                 Position pos = new Position(boardOffsets[i][1] + boxCol * BoxSize + cellCol, boardOffsets[i][0] + boxRow * BoxSize + cellRow);
 
