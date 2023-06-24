@@ -13,7 +13,6 @@
                 string directoryPath = Path.Combine(parentDirectory, relativePath);
 
 
-
                 if (!Directory.Exists(directoryPath))
                 {
                     Console.WriteLine("Directory does not exist.");
