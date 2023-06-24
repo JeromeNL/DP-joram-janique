@@ -6,7 +6,13 @@
         {
             public FileInfo ChooseFile()
             {
-                string directoryPath = "C:\\Users\\joram\\Source\\Repos\\DP-joram-janique-2\\Business Logic\\Puzzles\\";
+                string currentDirectory = Directory.GetCurrentDirectory();
+                string parentDirectory = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
+
+                string relativePath = "Puzzles";
+                string directoryPath = Path.Combine(parentDirectory, relativePath);
+
+
 
                 if (!Directory.Exists(directoryPath))
                 {

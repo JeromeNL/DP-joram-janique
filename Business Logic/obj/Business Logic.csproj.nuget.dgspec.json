@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joram\\Source\\Repos\\DP-joram-janique-2\\Business Logic\\Business Logic.csproj": {}
+    "C:\\Programmability\\Week 2\\Week 2 Huiswerk\\DP-joram-janique\\Business Logic\\Business Logic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joram\\Source\\Repos\\DP-joram-janique-2\\Business Logic\\Business Logic.csproj": {
+    "C:\\Programmability\\Week 2\\Week 2 Huiswerk\\DP-joram-janique\\Business Logic\\Business Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joram\\Source\\Repos\\DP-joram-janique-2\\Business Logic\\Business Logic.csproj",
+        "projectUniqueName": "C:\\Programmability\\Week 2\\Week 2 Huiswerk\\DP-joram-janique\\Business Logic\\Business Logic.csproj",
         "projectName": "Business Logic",
-        "projectPath": "C:\\Users\\joram\\Source\\Repos\\DP-joram-janique-2\\Business Logic\\Business Logic.csproj",
-        "packagesPath": "C:\\Users\\joram\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joram\\Source\\Repos\\DP-joram-janique-2\\Business Logic\\obj\\",
+        "projectPath": "C:\\Programmability\\Week 2\\Week 2 Huiswerk\\DP-joram-janique\\Business Logic\\Business Logic.csproj",
+        "packagesPath": "C:\\Users\\janiquevandenoever\\.nuget\\packages\\",
+        "outputPath": "C:\\Programmability\\Week 2\\Week 2 Huiswerk\\DP-joram-janique\\Business Logic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\joram\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\janiquevandenoever\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
