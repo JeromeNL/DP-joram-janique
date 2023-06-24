@@ -1,0 +1,15 @@
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Business Model\bin\Debug\net6.0\Business Model.exe
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Business Model\bin\Debug\net6.0\Business Model.deps.json
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Business Model\bin\Debug\net6.0\Business Model.runtimeconfig.json
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Business Model\bin\Debug\net6.0\Business Model.dll
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Business Model\bin\Debug\net6.0\Business Model.pdb
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Business Model\obj\Debug\net6.0\Business Model.csproj.AssemblyReference.cache
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Business Model\obj\Debug\net6.0\Business Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Business Model\obj\Debug\net6.0\Business Model.AssemblyInfoInputs.cache
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Business Model\obj\Debug\net6.0\Business Model.AssemblyInfo.cs
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Business Model\obj\Debug\net6.0\Business Model.csproj.CoreCompileInputs.cache
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Business Model\obj\Debug\net6.0\Business Model.dll
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Business Model\obj\Debug\net6.0\refint\Business Model.dll
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Business Model\obj\Debug\net6.0\Business Model.pdb
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Business Model\obj\Debug\net6.0\Business Model.genruntimeconfig.cache
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Business Model\obj\Debug\net6.0\ref\Business Model.dll

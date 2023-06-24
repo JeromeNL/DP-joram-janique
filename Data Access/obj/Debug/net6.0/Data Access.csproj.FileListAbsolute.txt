@@ -1,0 +1,15 @@
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Data Access\obj\Debug\net6.0\Data Access.csproj.AssemblyReference.cache
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Data Access\obj\Debug\net6.0\Data Access.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Data Access\obj\Debug\net6.0\Data Access.AssemblyInfoInputs.cache
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Data Access\obj\Debug\net6.0\Data Access.AssemblyInfo.cs
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Data Access\obj\Debug\net6.0\Data Access.csproj.CoreCompileInputs.cache
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Data Access\bin\Debug\net6.0\Data Access.exe
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Data Access\bin\Debug\net6.0\Data Access.deps.json
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Data Access\bin\Debug\net6.0\Data Access.runtimeconfig.json
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Data Access\bin\Debug\net6.0\Data Access.dll
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Data Access\bin\Debug\net6.0\Data Access.pdb
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Data Access\obj\Debug\net6.0\Data Access.dll
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Data Access\obj\Debug\net6.0\refint\Data Access.dll
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Data Access\obj\Debug\net6.0\Data Access.pdb
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Data Access\obj\Debug\net6.0\Data Access.genruntimeconfig.cache
+C:\Programmability\Week 2\Week 2 Huiswerk\DesignPatternsJoramJanique\SudokuSolver-Ai\Data Access\obj\Debug\net6.0\ref\Data Access.dll
