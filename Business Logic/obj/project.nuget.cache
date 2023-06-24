@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "twv5DkkXtiTseypKz/N9GlEknzJ5Us+16g51+h+fILl8vVvbEZ5kdxlFOnid2/UepjVy3LKaN+Ae2oCpCWz39A==",
+  "dgSpecHash": "zy6k8i1QvZLYshdx1nd53i0qZiJfFFdy7CjwLcUNBovhOtNOfkdliGW9VlzhM6MtR1vlVOHGHZaedocWDoECJA==",
   "success": true,
-  "projectFilePath": "C:\\Programmability\\Week 2\\Week 2 Huiswerk\\DesignPatternsJoramJanique\\New folder\\SudokuSolver-Ai\\SudokuSolver-Ai\\Business Logic\\Business Logic.csproj",
+  "projectFilePath": "C:\\Programmability\\Week 2\\Week 2 Huiswerk\\DP-joram-janique\\Business Logic\\Business Logic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\janiquevandenoever\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\janiquevandenoever\\.nuget\\packages\\microsoft.codecoverage\\17.6.1\\microsoft.codecoverage.17.6.1.nupkg.sha512",

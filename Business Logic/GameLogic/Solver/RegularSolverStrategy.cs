@@ -34,6 +34,7 @@ namespace Business_Logic.GameLogic.Solver
             if (cell == null)
                 return true;
 
+
             foreach (int value in GetLegalValues(cell, RegularSudoku))
             {
                 cell.currentValue = value;

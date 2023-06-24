@@ -20,8 +20,18 @@ namespace Business_Logic.GameLogic.Solver
 
             SamuraiSudoku.timer = Stopwatch.StartNew();
             BacktrackSolve(SamuraiSudoku);
+            
+            var x = 21 * 2;
+            var y = 21;
+            Console.SetCursorPosition(x * 2, y);
+            Console.WriteLine(" ");
+
+
             SamuraiSudoku.timer.Stop();
             SudokuPrintVisitor visitor = new SudokuPrintVisitor();
+            Console.WriteLine(" ");
+            Console.WriteLine("Printing the solved Board");
+            Console.WriteLine();
             SamuraiSudoku.AcceptPrint(visitor);
             Console.WriteLine("Solving time: " + SamuraiSudoku.timer.Elapsed);
         }

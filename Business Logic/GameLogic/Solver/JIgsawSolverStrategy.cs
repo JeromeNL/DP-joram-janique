@@ -17,9 +17,20 @@ namespace Business_Logic.GameLogic.Solver
         public void SolveSudoku(Sudoku JigsawSudoku)
         {
             JigsawSudoku.timer = Stopwatch.StartNew();
+      
             BacktrackSolve(JigsawSudoku);
+
+            var x = JigsawSudoku.components.Count() * 2;
+            var y = JigsawSudoku.components.Count();
+            Console.SetCursorPosition(x * 2, y);
+            Console.WriteLine(" ");
+
             JigsawSudoku.timer.Stop();
             SudokuPrintVisitor visitor = new SudokuPrintVisitor();
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.WriteLine("Printing the solved Board");
+            Console.WriteLine();
             JigsawSudoku.AcceptPrint(visitor);
             Console.WriteLine("Solving time: " + JigsawSudoku.timer.Elapsed);
         }
@@ -27,6 +38,7 @@ namespace Business_Logic.GameLogic.Solver
 
         public bool BacktrackSolve(Sudoku JigsawSudoku)
         {
+
             Leaf cell = FindUnassignedCell(JigsawSudoku);
             if (cell == null)
                 return true;
@@ -42,6 +54,7 @@ namespace Business_Logic.GameLogic.Solver
 
                 cell.currentValue = 0;
                 Console.SetCursorPosition(cell.position.X * 2, cell.position.Y);
+                
                 Console.Write("  ");
             }
 
